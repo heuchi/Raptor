@@ -59,7 +59,7 @@ public class UCIEngine {
 	protected static final String[] SUPPORTED_INFO_TYPES = { "depth", "seldepth", "time", "nodes", "pv", "multipv",
 			"score", "currmove", "currentmovenumber", "hashfull", "nps", "tbhits", "cpuload", "string" };
 	protected static final long CONNECTION_TIMEOUT = 5000;
-	public static final int MULTI_PLY = 5;
+	public static final int MULTI_PLY = 3;
 
 	protected Process process;
 	protected boolean isUsingThreadService = true;
