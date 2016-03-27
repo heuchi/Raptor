@@ -1,7 +1,7 @@
 # Offical Raptor Open Source Project Site
 I no longer want to be affiliated in any way with fics. I hate the place and its admins who seem to enjoy joining with trolls to abuse its users. There will never be another release of Raptor. Go to other chess servers screw FICS. I will leave this around in case anyone finds it useful but I am done with it for good. 
 
-And this Slek that tried to befriend me then whined to admins after harassing me and created countless dupes is the cause of it. The jerk only logs in without timeseal to avoid dupe detection and has created countless dupes yo harrass not only me but likely countless others. Fics admins side with him, fuck FICS. I will never log into it again. I encourage you to do the same and find a better server. Fics is garbage when trolls can manipulate admins and run the show.
+And this Slek that tried to befriend me then whined to admins after harassing me and created countless dupes is the cause of it. The jerk only logs in without timeseal to avoid dupe detection and has created countless dupes to harrass me, and likely man others as well. Fics admins side with troll and not the one who has spent many many man hours on interfaces so fuck FICS. I will never log into it again. I encourage you to do the same and find a better server. Fics is garbage when trolls can manipulate admins and run the show.
 
 Raptor is a multiplatform chess interface for [freechess.org](freechess.org) (aka FICS).
 
