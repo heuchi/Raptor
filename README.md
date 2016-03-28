@@ -1,11 +1,6 @@
 # Offical Raptor Open Source Project Site
-I no longer want to be affiliated in any way with fics. I hate the place and its admins who seem to enjoy joining with trolls to abuse its users. There will never be another release of Raptor. Go to other chess servers screw FICS. I will leave this around in case anyone finds it useful but I am done with it for good. 
-
-And this Slek that tried to befriend me then whined to admins after harassing me and created countless dupes is the cause of it. The jerk only logs in without timeseal to avoid dupe detection and has created countless dupes to harass me, and likely many others as well. Fics admins side with the troll, and not the one who has spent many many man hours on interfaces for the place over the years ... so fuck FICS. I will never log into it again. I encourage you to do the same and find a better server. Fics is garbage when trolls can manipulate admins and run the show.
-
 
 Raptor is a multiplatform chess interface for [freechess.org](freechess.org) (aka FICS).
-
 
 Downloads: (Requires Java JRE 6+ 64 bit)
  * [Raptor 1.0 Mac OSX (64 bit)] (https://github.com/Raptor-Fics-Interface/Raptor/releases/download/v1.0/Raptor_v1.0_OS_X_Cocoa_x86_64.dmg)
