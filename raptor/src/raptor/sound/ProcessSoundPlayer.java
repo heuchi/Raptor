@@ -13,11 +13,9 @@
  */
 package raptor.sound;
 
-import raptor.util.RaptorLogger;
- 
-
 import raptor.Raptor;
 import raptor.pref.PreferenceKeys;
+import raptor.util.RaptorLogger;
 
 /**
  * Plays sounds using the process defined with the preference key:
@@ -46,13 +44,5 @@ public class ProcessSoundPlayer implements SoundPlayer {
 			Raptor.getInstance().onError(
 					"Error occured playing sound file: " + pathToSound, e);
 		}
-	}
-
-	public void playBughouseSound(final String sound) {
-		play(Raptor.RESOURCES_DIR + "sounds/bughouse/" + sound + ".wav");
-	}
-
-	public void playSound(final String sound) {
-		play(Raptor.RESOURCES_DIR + "sounds/" + sound + ".wav");
 	}
 }

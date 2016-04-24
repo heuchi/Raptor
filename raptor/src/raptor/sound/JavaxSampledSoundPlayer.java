@@ -105,12 +105,4 @@ public class JavaxSampledSoundPlayer implements SoundPlayer {
 			}
 		}
 	}
-
-	public void playBughouseSound(final String sound) {
-		play(Raptor.RESOURCES_DIR + "sounds/bughouse/" + sound + ".wav");
-	}
-
-	public void playSound(final String sound) {
-		play(Raptor.RESOURCES_DIR + "sounds/" + sound + ".wav");
-	}
 }

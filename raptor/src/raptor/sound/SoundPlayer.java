@@ -29,16 +29,4 @@ public interface SoundPlayer {
 	 * @param pathToSound
 	 */
 	public void play(String pathToSound);
-
-	/**
-	 * Specify the name of a file in resources/sounds/bughouse without the .wav
-	 * to play the sound i.e. "+".
-	 */
-	public void playBughouseSound(String sound);
-
-	/**
-	 * Specify the name of a file in resources/common/sounds without the .wav to
-	 * play the sound i.e. "alert".
-	 */
-	public void playSound(String sound);
 }

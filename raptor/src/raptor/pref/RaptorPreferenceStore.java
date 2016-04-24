@@ -43,6 +43,7 @@ import raptor.chat.ChatEvent;
 import raptor.chat.ChatType;
 import raptor.layout.ClassicLayout;
 import raptor.service.SeekService.SeekType;
+import raptor.service.SoundService;
 import raptor.service.ThemeService;
 import raptor.service.ThemeService.Theme;
 import raptor.swt.BugPartners;
@@ -415,6 +416,8 @@ public class RaptorPreferenceStore extends PreferenceStore implements Preference
 		} else if (OSUtils.isLikelyLinux()) {
 			setDefault(SPEECH_PROCESS_NAME, "say");
 		}
+		
+		setDefault(APP_SOUND_PACK,SoundService.DEFAULT_SOUND_PACK_DIR);
 
 		if (OSUtils.isLikelyLinux()) {
 			try {

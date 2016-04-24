@@ -21,6 +21,7 @@ import java.util.List;
 
 import raptor.Raptor;
 import raptor.pref.PreferenceKeys;
+import raptor.pref.RaptorPreferenceStore;
 import raptor.sound.SoundPlayer;
 import raptor.sound.SoundUtils;
 import raptor.speech.Speech;
@@ -32,6 +33,8 @@ import raptor.util.RaptorLogger;
  */
 public class SoundService {
 	private static final RaptorLogger LOG = RaptorLogger.getLog(SoundService.class);
+	public static final String SOUNDS_DIR = Raptor.RESOURCES_DIR + "sounds/";
+	public static final String DEFAULT_SOUND_PACK_DIR = SOUNDS_DIR + "Raptor/";
 	public static boolean serviceCreated = false;
 	private static SoundService singletonInstance;
 
@@ -51,6 +54,7 @@ public class SoundService {
 	protected SoundPlayer soundPlayer;
 
 	protected Speech speech = null;
+	protected RaptorPreferenceStore preferences = Raptor.getInstance().getPreferences();
 
 	private SoundService() {
 		init();
@@ -65,6 +69,16 @@ public class SoundService {
 		if (speech != null) {
 			speech.dispose();
 		}
+	}
+
+	public String[] getSoundPackList() {
+		File file = new File(SOUNDS_DIR);
+		return file.list(new FilenameFilter() {
+			@Override
+			public boolean accept(File dir, String name) {
+				return dir.isDirectory();
+			}
+		});
 	}
 
 	public String[] getBughouseSoundKeys() {
@@ -135,7 +149,7 @@ public class SoundService {
 		if (Raptor.getInstance().getPreferences().getBoolean(PreferenceKeys.APP_SOUND_ENABLED) && soundPlayer != null) {
 			ThreadService.getInstance().run(new Runnable() {
 				public void run() {
-					soundPlayer.playBughouseSound(sound);
+					soundPlayer.play(deriveBughouseSoundPath(sound));
 				}
 			});
 		}
@@ -149,10 +163,31 @@ public class SoundService {
 		if (Raptor.getInstance().getPreferences().getBoolean(PreferenceKeys.APP_SOUND_ENABLED) && soundPlayer != null) {
 			ThreadService.getInstance().run(new Runnable() {
 				public void run() {
-					soundPlayer.playSound(sound);
+					soundPlayer.play(deriveSoundPath(sound));
 				}
 			});
 		}
+	}
+
+	private String deriveBughouseSoundPath(String sound) {
+		return deriveSoundPath("bughouse/" + sound);
+	}
+
+	private String deriveSoundPath(String sound) {
+		String wav = sound + ".wav";
+		String testPath = SOUNDS_DIR + preferences.getString(PreferenceKeys.APP_SOUND_PACK) + "/" + wav;
+		File testFile = new File(testPath);
+
+		String result = "";
+		if (testFile.exists()) {
+			result = testPath;
+		} else {
+			if (LOG.isInfoEnabled())
+				LOG.info("Found sound pack sound " + testPath);
+
+			result = DEFAULT_SOUND_PACK_DIR + wav;
+		}
+		return result;
 	}
 
 	/**
@@ -184,8 +219,8 @@ public class SoundService {
 		LOG.info("Initializing sound service.");
 		long startTime = System.currentTimeMillis();
 
-		bughouseSoundKeys = getSoundsKeys("sounds/bughouse");
-		soundKeys = getSoundsKeys("sounds");
+		bughouseSoundKeys = getSoundsKeys("bughouse");
+		soundKeys = getSoundsKeys("");
 
 		initSoundPlayer();
 		initSpeech();
@@ -198,7 +233,7 @@ public class SoundService {
 
 		try {
 			List<String> soundKeyList = new ArrayList<String>(20);
-			File file = new File(Raptor.RESOURCES_DIR + baseDir);
+			File file = new File(DEFAULT_SOUND_PACK_DIR + baseDir);
 			File[] files = file.listFiles(new FilenameFilter() {
 				public boolean accept(File dir, String name) {
 					return name.endsWith(".wav");
