@@ -21,8 +21,7 @@ import raptor.util.RaptorLogger;
 
 public class UCIEngineService {
 	@SuppressWarnings("unused")
-	private static final RaptorLogger LOG = RaptorLogger
-			.getLog(UCIEngineService.class);
+	private static final RaptorLogger LOG = RaptorLogger.getLog(UCIEngineService.class);
 	public static boolean serviceCreated = false;
 	public static UCIEngineService singletonInstance;
 
@@ -51,7 +50,7 @@ public class UCIEngineService {
 
 					UCIEngine engine = new UCIEngine();
 					engine.setDefault(true);
-					engine.setUserName("Stockfish 6");
+					engine.setUserName("Stockfish 7");
 					engine.setSupportsFischerRandom(true);
 					engine.setMultiplyBlackScoreByMinus1(true);
 					engine.setProcessPath(getProcessorPath());
@@ -68,19 +67,19 @@ public class UCIEngineService {
 
 		if (isDevMode) {
 			if (OSUtils.isLikelyOSX()) {
-				result = "./projectFiles/Raptor.app.cocoa64/contents/MacOS/stockfish/Mac/stockfish-6-64";
+				result = "./projectFiles/Raptor.app.cocoa64/contents/MacOS/stockfish/Mac/stockfish-7-64";
 			} else if (OSUtils.isLikelyLinux()) {
-				result = "./projectFiles/linux/stockfish/Linux/stockfish_6_x64";
+				result = "./projectFiles/linux/stockfish/Linux/stockfish 7 x64";
 			} else if (OSUtils.isLikelyWindows()) {
-				result = "./projectFiles/Windows/stockfish/Windows/stockfish-6-64.exe";
+				result = "./projectFiles/Windows/stockfish/Windows/stockfish 7 x64.exe";
 			}
 		} else {
 			if (OSUtils.isLikelyOSX()) {
-				result = "stockfish/Mac/stockfish-6-64";
+				result = "stockfish/Mac/stockfish-7-64";
 			} else if (OSUtils.isLikelyLinux()) {
-				result = "stockfish/Linux/stockfish_6_x64";
+				result = "stockfish/Linux/stockfish 7 x64";
 			} else if (OSUtils.isLikelyWindows()) {
-				result = "stockfish/Windows/stockfish-6-64.exe";
+				result = "stockfish/Windows/stockfish 7 x64.exe";
 			}
 		}
 
@@ -88,9 +87,7 @@ public class UCIEngineService {
 		if (file.exists()) {
 			return file.getAbsolutePath();
 		} else {
-			throw new IllegalStateException(
-					"Can not determine path to stockfish. This is invalid: "
-							+ result);
+			throw new IllegalStateException("Can not determine path to stockfish. This is invalid: " + result);
 		}
 	}
 }
