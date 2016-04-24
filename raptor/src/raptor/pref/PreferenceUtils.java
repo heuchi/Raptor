@@ -52,6 +52,7 @@ import raptor.pref.page.SeekPage;
 import raptor.pref.page.SoundPage;
 import raptor.pref.page.SoundsPage;
 import raptor.pref.page.SpeechPage;
+import raptor.pref.page.StockfishPage;
 import raptor.service.ConnectorService;
 
 /**
@@ -85,8 +86,6 @@ public class PreferenceUtils {
 		PreferenceManager mgr = new PreferenceManager('/');
 
 		mgr.addToRoot(new PreferenceNode("general", new GeneralPage()));
-		// mgr.addTo("general", new PreferenceNode("layout1",
-		// new RaptorWindowQuadrantsPage("1")));
 		mgr.addTo("general", new PreferenceNode("window", new RaptorWindowPage()));
 		mgr.addToRoot(new PreferenceNode("bughouse", new BughousePage()));
 		mgr.addTo("bughouse", new PreferenceNode("buttons", new ActionContainerPage(local.getString("prefUtil1"),
@@ -143,6 +142,7 @@ public class PreferenceUtils {
 		mgr.addTo("chatConsole/toolbar",
 				new PreferenceNode("regex", new ActionContainerPage(local.getString("prefUtil23"),
 						local.getString("prefUtil24"), RaptorActionContainer.RegExChatConsole)));
+
 		mgr.addToRoot(new PreferenceNode("scripts", new ScriptsPage()));
 		mgr.addTo("scripts", new PreferenceNode("actionScripts", new ActionScriptsPage()));
 		mgr.addTo("scripts", new PreferenceNode("actionScriptKeys", new ActionKeyBindingsPage()));
@@ -152,6 +152,7 @@ public class PreferenceUtils {
 		mgr.addToRoot(new PreferenceNode("sounds", new SoundsPage()));
 		mgr.addToRoot(new PreferenceNode("sound process config", new SoundPage()));
 		mgr.addToRoot(new PreferenceNode("speech", new SpeechPage()));
+		mgr.addToRoot(new PreferenceNode("stockfish", new StockfishPage()));
 
 		// Add the connector preference nodes.
 		Connector[] connectors = ConnectorService.getInstance().getConnectors();

@@ -18,8 +18,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import raptor.util.RaptorLogger;
- 
+
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.MouseAdapter;
 import org.eclipse.swt.events.MouseEvent;
@@ -46,6 +45,7 @@ import raptor.Raptor;
 import raptor.chat.Seek;
 import raptor.pref.PreferenceKeys;
 import raptor.service.SeekService;
+import raptor.util.RaptorLogger;
 
 /**
  * Seek Plot Component Shows seeks on a time vs. rating scatter plot

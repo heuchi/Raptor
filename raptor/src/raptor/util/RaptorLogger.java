@@ -1,7 +1,5 @@
 package raptor.util;
 
-import raptor.util.RaptorLogger;
- 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.log4j.PropertyConfigurator;

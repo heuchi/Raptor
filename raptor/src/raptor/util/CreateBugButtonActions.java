@@ -22,9 +22,9 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.WordUtils;
 
 import raptor.Raptor;
+import raptor.action.RaptorAction.Category;
 import raptor.action.RaptorActionFactory;
 import raptor.action.ScriptedAction;
-import raptor.action.RaptorAction.Category;
 
 public class CreateBugButtonActions {
 	public static void main(String args[]) throws Exception {

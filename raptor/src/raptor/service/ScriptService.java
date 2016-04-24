@@ -26,8 +26,8 @@ import java.util.Map;
 import java.util.Properties;
 
 import raptor.Raptor;
-import raptor.script.ParameterScript;
 import raptor.script.ChatEventScript;
+import raptor.script.ParameterScript;
 import raptor.script.ScriptConnectorType;
 import raptor.script.ScriptUtils;
 import raptor.util.RaptorLogger;

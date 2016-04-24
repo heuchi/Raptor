@@ -13,8 +13,6 @@
  */
 package raptor.swt.chess.movelist;
 
-import raptor.util.RaptorLogger;
- 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
@@ -28,6 +26,7 @@ import raptor.swt.RaptorTable;
 import raptor.swt.RaptorTable.RaptorTableAdapter;
 import raptor.swt.chess.ChessBoardController;
 import raptor.swt.chess.ChessBoardMoveList;
+import raptor.util.RaptorLogger;
 
 /**
  * A move list that just shows a simple 2 column table. The table is traversable

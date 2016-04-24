@@ -13,8 +13,6 @@
  */
 package raptor.swt.chess;
 
-import raptor.util.RaptorLogger;
- 
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
@@ -27,6 +25,7 @@ import raptor.pref.PreferenceKeys;
 import raptor.service.ChessBoardCacheService;
 import raptor.swt.ItemChangedListener;
 import raptor.swt.chess.controller.InactiveController;
+import raptor.util.RaptorLogger;
 
 /**
  * You should only use this class directly when you don't want to use the

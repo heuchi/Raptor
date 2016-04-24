@@ -17,6 +17,7 @@ import static raptor.chess.util.GameUtils.bitscanClear;
 import static raptor.chess.util.GameUtils.bitscanForward;
 import static raptor.chess.util.GameUtils.getFile;
 import static raptor.chess.util.GameUtils.getSan;
+
 import raptor.chess.pgn.PgnHeader;
 
 /**

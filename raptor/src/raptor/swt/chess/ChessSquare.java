@@ -13,8 +13,6 @@
  */
 package raptor.swt.chess;
 
-import raptor.util.RaptorLogger;
-
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ControlEvent;
 import org.eclipse.swt.events.ControlListener;
@@ -37,6 +35,7 @@ import raptor.chess.util.GameUtils;
 import raptor.pref.PreferenceKeys;
 import raptor.pref.RaptorPreferenceStore;
 import raptor.swt.SWTUtils;
+import raptor.util.RaptorLogger;
 
 /**
  * A class representing a chess square on a chess board. This class can also be

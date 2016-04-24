@@ -25,6 +25,7 @@ import java.util.concurrent.Future;
 
 import org.apache.commons.lang.StringUtils;
 
+import raptor.Raptor;
 import raptor.chess.Move;
 import raptor.engine.uci.info.BestLineFoundInfo;
 import raptor.engine.uci.info.CPULoadInfo;
@@ -43,6 +44,7 @@ import raptor.engine.uci.options.UCICheck;
 import raptor.engine.uci.options.UCICombo;
 import raptor.engine.uci.options.UCISpinner;
 import raptor.engine.uci.options.UCIString;
+import raptor.pref.PreferenceKeys;
 import raptor.service.ThreadService;
 import raptor.util.RaptorLogger;
 import raptor.util.RaptorStringTokenizer;
@@ -59,7 +61,6 @@ public class UCIEngine {
 	protected static final String[] SUPPORTED_INFO_TYPES = { "depth", "seldepth", "time", "nodes", "pv", "multipv",
 			"score", "currmove", "currentmovenumber", "hashfull", "nps", "tbhits", "cpuload", "string" };
 	protected static final long CONNECTION_TIMEOUT = 5000;
-	public static final int MULTI_PLY = 3;
 
 	protected Process process;
 	protected boolean isUsingThreadService = true;
@@ -137,7 +138,8 @@ public class UCIEngine {
 
 			UCIOption multiPv = new UCISpinner();
 			multiPv.setName("MultiPV");
-			multiPv.setValue("" + MULTI_PLY);
+			multiPv.setValue(
+					Raptor.getInstance().getPreferences().getString(PreferenceKeys.STOCKFISH_MOVES_TO_SUGGEST));
 			setOption(multiPv);
 			isReady();
 

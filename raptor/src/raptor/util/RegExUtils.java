@@ -16,7 +16,6 @@ package raptor.util;
 import java.util.regex.Pattern;
 
 import raptor.international.L10n;
-import raptor.util.RaptorLogger;
  
 
 public class RegExUtils {

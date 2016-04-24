@@ -21,9 +21,6 @@ import org.eclipse.swt.SWTError;
 import org.eclipse.swt.browser.Browser;
 import org.eclipse.swt.widgets.Shell;
 
-import raptor.util.RaptorLogger;
- 
-
 import raptor.Raptor;
 import raptor.pref.PreferenceKeys;
 import raptor.swt.BrowserWindowItem;

@@ -16,10 +16,10 @@ package raptor.script;
 import java.util.Comparator;
 import java.util.regex.Pattern;
 
+import bsh.Interpreter;
 import raptor.Raptor;
 import raptor.chat.ChatType;
 import raptor.util.RaptorLogger;
-import bsh.Interpreter;
 
 /**
  * The chat script class. Currently uses BeanShell to execute scripts.

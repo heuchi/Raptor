@@ -32,9 +32,9 @@ import org.eclipse.swt.widgets.Text;
 
 import raptor.Raptor;
 import raptor.action.RaptorAction;
-import raptor.action.ScriptedAction;
 import raptor.action.RaptorAction.Category;
 import raptor.action.RaptorAction.RaptorActionContainer;
+import raptor.action.ScriptedAction;
 import raptor.international.L10n;
 import raptor.service.ActionScriptService;
 import raptor.swt.RaptorTable;

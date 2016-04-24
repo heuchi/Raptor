@@ -13,13 +13,21 @@
  */
 package raptor.pref.page;
 
+import org.eclipse.jface.preference.ComboFieldEditor;
 import org.eclipse.jface.preference.FieldEditorPreferencePage;
 
 import raptor.Raptor;
 import raptor.international.L10n;
+import raptor.pref.PreferenceKeys;
 
-public class ChessEnginesPage extends FieldEditorPreferencePage {
-	public ChessEnginesPage() {
+public class StockfishPage extends FieldEditorPreferencePage {
+	
+	protected static L10n local = L10n.getInstance();
+
+	public static final String[][] MOVES_TO_SUGGEST = { { "1", "1" }, { "2", "2" }, { "3", "3" }, { "4", "4" },
+			{ "5", "5" }, { "6", "6" }, { "7", "7" }, { "8", "8" }, };
+
+	public StockfishPage() {
 		super(FLAT);
 		setTitle(L10n.getInstance().getString("chessEngines"));
 		setPreferenceStore(Raptor.getInstance().getPreferences());
@@ -27,5 +35,10 @@ public class ChessEnginesPage extends FieldEditorPreferencePage {
 
 	@Override
 	protected void createFieldEditors() {
+		
+		addField(new ComboFieldEditor(
+				PreferenceKeys.STOCKFISH_MOVES_TO_SUGGEST,
+				local.getString("movesToSuggest"),
+				MOVES_TO_SUGGEST, getFieldEditorParent()));
 	}
 }

@@ -16,8 +16,6 @@ package raptor.swt.chess.movelist;
 import java.util.ArrayList;
 import java.util.List;
 
-import raptor.util.RaptorLogger;
-
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.StyleRange;
 import org.eclipse.swt.custom.StyledText;
@@ -45,6 +43,7 @@ import raptor.swt.chess.ChessBoardController;
 import raptor.swt.chess.ChessBoardMoveList;
 import raptor.swt.chess.controller.InactiveController;
 import raptor.swt.chess.controller.ToolBarItemKey;
+import raptor.util.RaptorLogger;
 
 /**
  * Simple movelist that uses SWT StyledText. This would allow to support

@@ -15,6 +15,7 @@ package raptor.chess;
 
 import static raptor.chess.util.GameUtils.bitscanClear;
 import static raptor.chess.util.GameUtils.bitscanForward;
+
 import raptor.chess.pgn.PgnHeader;
 import raptor.chess.util.GameUtils;
 import raptor.chess.util.SanUtils;

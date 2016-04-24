@@ -87,6 +87,8 @@ public interface PreferenceKeys {
 	public static final String APP_IS_LOGGING_CHANNEL_TELLS = "app-is-logging-channel-tells";
 	
 	public static final String APP_SOUND_PACK = "app-sound-pack";
+	
+	public static final String STOCKFISH_MOVES_TO_SUGGEST = "stockfish-moves-to-suggest";
 
 	public static final String ACTION_SEPARATOR_SEQUENCE = "action-separator-sequence";
 

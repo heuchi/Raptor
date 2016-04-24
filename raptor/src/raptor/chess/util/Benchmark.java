@@ -14,6 +14,7 @@
 package raptor.chess.util;
 
 import static raptor.chess.GameFactory.createFromFen;
+
 import raptor.chess.Game;
 import raptor.chess.Move;
 import raptor.chess.Variant;

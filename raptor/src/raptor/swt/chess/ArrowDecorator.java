@@ -16,8 +16,6 @@ package raptor.swt.chess;
 import java.util.ArrayList;
 import java.util.List;
 
-import raptor.util.RaptorLogger;
- 
 import org.eclipse.swt.events.PaintEvent;
 import org.eclipse.swt.events.PaintListener;
 import org.eclipse.swt.graphics.Color;
@@ -27,6 +25,7 @@ import org.eclipse.swt.graphics.Transform;
 import raptor.Raptor;
 import raptor.chess.util.GameUtils;
 import raptor.pref.PreferenceKeys;
+import raptor.util.RaptorLogger;
 
 /**
  * A class which manages GUI arrow decorations between squares on a chess board.

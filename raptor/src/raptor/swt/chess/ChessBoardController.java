@@ -19,8 +19,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang.StringUtils;
-import raptor.util.RaptorLogger;
- 
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
@@ -42,6 +40,7 @@ import raptor.pref.RaptorPreferenceStore;
 import raptor.service.SoundService;
 import raptor.swt.ItemChangedListener;
 import raptor.swt.chess.controller.ToolBarItemKey;
+import raptor.util.RaptorLogger;
 
 /**
  * A chess board controller handles updating a ChessBoard to a Game. It also

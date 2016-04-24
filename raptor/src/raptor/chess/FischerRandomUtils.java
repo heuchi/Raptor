@@ -17,6 +17,7 @@ import static raptor.chess.util.GameUtils.bitscanForward;
 import static raptor.chess.util.GameUtils.getBitboard;
 import static raptor.chess.util.GameUtils.getSquare;
 import static raptor.chess.util.ZobristUtils.zobrist;
+
 import raptor.chess.util.GameUtils;
 
 /**

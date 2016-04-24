@@ -13,8 +13,6 @@
  */
 package raptor.swt;
 
-import raptor.util.RaptorLogger;
- 
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.SWT;
@@ -35,6 +33,7 @@ import raptor.connector.Connector;
 import raptor.international.L10n;
 import raptor.pref.PreferenceKeys;
 import raptor.service.ActionScriptService;
+import raptor.util.RaptorLogger;
 
 public class BugButtonsWindowItem implements RaptorConnectorWindowItem {
 	static final RaptorLogger LOG = RaptorLogger.getLog(BugButtonsWindowItem.class);

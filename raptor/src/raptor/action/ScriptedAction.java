@@ -13,9 +13,9 @@
  */
 package raptor.action;
 
+import bsh.Interpreter;
 import raptor.Raptor;
 import raptor.script.ScriptContext;
-import bsh.Interpreter;
 
 /**
  * A RaptorAction executed from a script.

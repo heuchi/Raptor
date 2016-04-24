@@ -13,8 +13,6 @@
  */
 package raptor.swt.chess.layout;
 
-import raptor.util.RaptorLogger;
- 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ControlEvent;
 import org.eclipse.swt.events.ControlListener;
@@ -28,6 +26,7 @@ import raptor.pref.PreferenceKeys;
 import raptor.swt.SWTUtils;
 import raptor.swt.chess.ChessBoard;
 import raptor.swt.chess.ChessBoardLayout;
+import raptor.util.RaptorLogger;
 
 public class TopBottomOrientedLayout extends ChessBoardLayout {
 	private static final RaptorLogger LOG = RaptorLogger.getLog(TopBottomOrientedLayout.class);

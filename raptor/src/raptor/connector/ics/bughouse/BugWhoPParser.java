@@ -18,8 +18,8 @@ import java.util.ArrayList;
 import org.apache.commons.lang.StringUtils;
 
 import raptor.chat.Bugger;
-import raptor.chat.Partnership;
 import raptor.chat.Bugger.BuggerStatus;
+import raptor.chat.Partnership;
 import raptor.connector.ics.IcsUtils;
 import raptor.util.RaptorLogger;
 import raptor.util.RaptorStringTokenizer;

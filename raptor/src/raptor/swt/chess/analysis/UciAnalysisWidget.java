@@ -203,7 +203,8 @@ public class UciAnalysisWidget implements EngineAnalysisWidget {
 									}
 
 									if (bestMoves.getRowCount() == 0) {
-										String[][] data = new String[UCIEngine.MULTI_PLY][6];
+										String[][] data = new String[Raptor.getInstance().getPreferences()
+												.getInt(PreferenceKeys.STOCKFISH_MOVES_TO_SUGGEST)][6];
 										for (int i = 0; i < data.length; i++)
 											for (int j = 0; j < data[i].length; j++)
 												data[i][j] = "";
@@ -427,7 +428,7 @@ public class UciAnalysisWidget implements EngineAnalysisWidget {
 	public void updateFromPrefs() {
 		Color background = Raptor.getInstance().getPreferences().getColor(PreferenceKeys.BOARD_BACKGROUND_COLOR);
 		Color labelForeground = Raptor.getInstance().getPreferences().getColor(PreferenceKeys.BOARD_CONTROL_COLOR);
-		
+
 		composite.setBackground(background);
 		topLine.setBackground(background);
 		bestMoveHeaderLabel.setForeground(labelForeground);
@@ -473,7 +474,6 @@ public class UciAnalysisWidget implements EngineAnalysisWidget {
 								opt.setValue("false");
 								engine.setOption(opt);
 							}
-							
 
 							engine.newGame();
 							engine.setPosition(controller.getGame().toFen(), null);

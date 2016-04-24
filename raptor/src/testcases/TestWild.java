@@ -1,9 +1,8 @@
 package testcases;
 
-import junit.framework.Assert;
-
 import org.junit.Test;
 
+import junit.framework.Assert;
 import raptor.chess.Game;
 import raptor.chess.GameFactory;
 import raptor.chess.Move;

@@ -21,8 +21,8 @@ import org.apache.commons.lang.StringUtils;
 
 import raptor.Raptor;
 import raptor.chat.ChatEvent;
-import raptor.chat.ChatType;
 import raptor.chat.ChatLogger.ChatEventParseListener;
+import raptor.chat.ChatType;
 import raptor.service.ThreadService;
 import raptor.swt.chat.ChatConsoleController;
 import raptor.util.RaptorRunnable;

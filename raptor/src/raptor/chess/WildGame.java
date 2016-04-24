@@ -5,6 +5,7 @@ import static raptor.chess.util.GameUtils.bitscanForward;
 import static raptor.chess.util.GameUtils.getBitboard;
 import static raptor.chess.util.GameUtils.getFile;
 import static raptor.chess.util.GameUtils.getSquare;
+
 import raptor.chess.pgn.PgnHeader;
 
 public class WildGame extends ClassicGame {

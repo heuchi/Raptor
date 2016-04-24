@@ -13,8 +13,6 @@
  */
 package raptor.swt.chess.layout;
 
-import raptor.util.RaptorLogger;
- 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ControlEvent;
 import org.eclipse.swt.events.ControlListener;
@@ -26,6 +24,7 @@ import org.eclipse.swt.widgets.Composite;
 import raptor.swt.SWTUtils;
 import raptor.swt.chess.ChessBoard;
 import raptor.swt.chess.ChessBoardLayout;
+import raptor.util.RaptorLogger;
 
 /**
  * This layout adjusts the font sizes to match the viewing area. It displays all

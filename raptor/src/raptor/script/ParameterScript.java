@@ -13,8 +13,8 @@
  */
 package raptor.script;
 
-import raptor.Raptor;
 import bsh.Interpreter;
+import raptor.Raptor;
 
 public class ParameterScript implements Comparable<ParameterScript> {
 	public enum Type {

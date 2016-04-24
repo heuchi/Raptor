@@ -13,9 +13,6 @@
  */
 package raptor.util;
 
-import raptor.util.RaptorLogger;
- 
-
 import raptor.Raptor;
 import raptor.connector.Connector;
 

@@ -14,8 +14,6 @@
 package raptor.swt;
 
 import org.apache.commons.lang.StringUtils;
-import raptor.util.RaptorLogger;
- 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.browser.Browser;
 import org.eclipse.swt.browser.CloseWindowListener;
@@ -40,6 +38,7 @@ import raptor.Raptor;
 import raptor.RaptorWindowItem;
 import raptor.international.L10n;
 import raptor.pref.PreferenceKeys;
+import raptor.util.RaptorLogger;
 
 /**
  * Please use BrowserUtils.openUrl instead of this class unless you specifically

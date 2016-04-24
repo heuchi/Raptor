@@ -432,6 +432,9 @@ public class RaptorPreferenceStore extends PreferenceStore implements Preference
 				LOG.warn("Error launching which to determine sound process in linux.", t);
 			}
 		}
+		
+		// Stockfish
+		setDefault(STOCKFISH_MOVES_TO_SUGGEST,3);
 
 		// Board
 		setDefault(BOARD_ALLOW_MOUSE_WHEEL_NAVIGATION_WHEEL_PLAYING, false);
