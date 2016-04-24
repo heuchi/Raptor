@@ -1012,12 +1012,12 @@ public class IcsUtils implements GameConstants {
 						: message.canBlackCastleQSide ? CASTLE_LONG
 								: CASTLE_NONE);
 
-		if (message.doublePawnPushFile == -1) {
+		if (message.doublePawnPushFile == -1) {  
 			game.setEpSquare(EMPTY_SQUARE);
 			game.setInitialEpSquare(EMPTY_SQUARE);
 		} else {
 			int doublePawnPushSquare = GameUtils.getSquare(
-					message.isWhitesMoveAfterMoveIsMade ? 2 : 5,
+					message.isWhitesMoveAfterMoveIsMade ? 5 : 2, 
 					message.doublePawnPushFile);
 			game.setEpSquare(doublePawnPushSquare);
 			game.setInitialEpSquare(doublePawnPushSquare);
