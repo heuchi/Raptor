@@ -183,7 +183,7 @@ public class SoundService {
 			result = testPath;
 		} else {
 			if (LOG.isInfoEnabled())
-				LOG.info("Found sound pack sound " + testPath);
+				LOG.info("Sound paack sound not found. Using default sound pack. Path tested=" + testPath);
 
 			result = DEFAULT_SOUND_PACK_DIR + wav;
 		}
