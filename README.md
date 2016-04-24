@@ -1,6 +1,6 @@
 # Offical Raptor Open Source Project Site
-Raptor is a multiplatform chess interface for [freechess.org](freechess.org) (aka FICS).
 
+Raptor is a multiplatform chess interface for [freechess.org](freechess.org) (aka FICS).
 
 Downloads: (Requires Java JRE 6+ 64 bit)
  * [Raptor 1.0 Mac OSX (64 bit)] (https://github.com/Raptor-Fics-Interface/Raptor/releases/download/v1.0/Raptor_v1.0_OS_X_Cocoa_x86_64.dmg)
