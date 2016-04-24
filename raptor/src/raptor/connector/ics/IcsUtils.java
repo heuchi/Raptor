@@ -1017,7 +1017,7 @@ public class IcsUtils implements GameConstants {
 			game.setInitialEpSquare(EMPTY_SQUARE);
 		} else {
 			int doublePawnPushSquare = GameUtils.getSquare(
-					message.isWhitesMoveAfterMoveIsMade ? 5 : 2,
+					message.isWhitesMoveAfterMoveIsMade ? 4 : 5,
 					message.doublePawnPushFile);
 			game.setEpSquare(doublePawnPushSquare);
 			game.setInitialEpSquare(doublePawnPushSquare);
