@@ -30,7 +30,7 @@ public class L10n {
         public static boolean noSavedLocaleFile = false;
 	private static L10n singletonInstance;
 	private static ResourceBundle captions;
-	public static Locale[] availableLocales = { Locale.ENGLISH, Locale.ITALIAN, 
+        public static Locale[] availableLocales = { Locale.ENGLISH, Locale.ITALIAN, Locale.GERMAN, 
 		new Locale("uk")  };
 	private static Locale suitLocCache;
 	
