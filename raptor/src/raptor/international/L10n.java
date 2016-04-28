@@ -30,6 +30,7 @@ public class L10n {
         public static boolean noSavedLocaleFile = false;
 	private static L10n singletonInstance;
 	private static ResourceBundle captions;
+        private static ResourceBundle fallBackCaptions;
         public static Locale[] availableLocales = { Locale.ENGLISH, Locale.ITALIAN, Locale.GERMAN, 
 		new Locale("uk")  };
 	private static Locale suitLocCache;
@@ -50,6 +51,9 @@ public class L10n {
 		currentLocale = locale;
 		captions = ResourceBundle.getBundle("raptor.international.Messages",
 				locale);
+                // load English resources to use when local translation does
+                // not contain a key
+                fallBackCaptions = ResourceBundle.getBundle("raptor.international.Messages", Locale.ENGLISH);
 	}
 	
 	public static String getStringS(String key) {
@@ -57,7 +61,12 @@ public class L10n {
 	}
 	
 	public String getString(String key) {
-		return captions.getString(key);
+                try {
+                    return captions.getString(key);
+                } catch (java.util.MissingResourceException e) {
+                    // use English string if not provided in translation
+                    return fallBackCaptions.getString(key);
+                }
 	}
 	
 	/**
