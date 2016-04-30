@@ -15,14 +15,17 @@ package raptor.action.chat;
 
 import raptor.Raptor;
 import raptor.action.AbstractRaptorAction;
+import raptor.international.L10n;
 import raptor.swt.chat.controller.GameChatController;
 import raptor.swt.chat.controller.ToolBarItemKey;
 
 public class SpeakWhispersAction extends AbstractRaptorAction {
+	protected static L10n local = L10n.getInstance();
+	
 	public SpeakWhispersAction() {
-		setName("Speak Whispers and Kibs");
+		setName(local.getString("speakWhisper.name"));
+		setDescription(local.getString("speakWhisper.description"));
 		setIcon("musicNote");
-		setDescription("Speaks all whispers and kibitzes to you within this tab. Requires sound to be setup. See Preferences->Speech.");
 		setCategory(Category.ConsoleCommands);
 	}
 

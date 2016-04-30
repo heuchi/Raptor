@@ -15,12 +15,15 @@ package raptor.action.chat;
 
 import raptor.Raptor;
 import raptor.action.AbstractRaptorAction;
+import raptor.international.L10n;
 
 public class ChatSaveAction extends AbstractRaptorAction {
+	protected static L10n local = L10n.getInstance();
+	
 	public ChatSaveAction() {
-		setName("Save Chat Console");
+		setName(local.getString("chatSave.name"));
 		setIcon("save");
-		setDescription("Saves the content of the chat console to a file.");
+		setDescription(local.getString("chatSave.description"));
 		setCategory(Category.ConsoleCommands);
 	}
 

@@ -15,11 +15,14 @@ package raptor.action.chat;
 
 import raptor.Raptor;
 import raptor.action.AbstractRaptorAction;
+import raptor.international.L10n;
 
 public class PrependLastPersonWhoToldAction extends AbstractRaptorAction {
+	protected static L10n local = L10n.getInstance();
+	
 	public PrependLastPersonWhoToldAction() {
-		setName("PrependLastPersonToTell");
-		setDescription("Replaces the input text with tell followed by the name of the last person who sent you a direct tell.");
+		setName(local.getString("prependLastPersonWhoTold.name"));
+		setDescription(local.getString("prependLastPersonWhoTold.description"));
 		setCategory(Category.ConsoleCommands);
 	}
 

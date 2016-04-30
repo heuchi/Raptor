@@ -13,8 +13,8 @@ public class ZoomOutAction extends AbstractRaptorAction {
 	protected static L10n local = L10n.getInstance();
 
 	public ZoomOutAction() {
-		setName("Zoom-out");
-		setDescription("Decreases all the font sizes in raptor.");
+		setName(local.getString("zoomout.name"));
+		setDescription(local.getString("zoomout.description"));
 		setCategory(Category.ConsoleCommands);
 	}
 

@@ -15,13 +15,16 @@ package raptor.action.chat;
 
 import raptor.Raptor;
 import raptor.action.AbstractRaptorAction;
+import raptor.international.L10n;
 import raptor.swt.chat.controller.RegExController;
 
 public class AdjustRegularExpression extends AbstractRaptorAction {
+	protected static L10n local = L10n.getInstance();
+	
 	public AdjustRegularExpression() {
-		setName("Adjust Regular Expression (RegEx Tabs Only)");
+		setName(local.getString("adjustRegex.name"));
 		setIcon("wrench");
-		setDescription("Changes the regular expression currently being used in the RegEx tab.");
+		setDescription(local.getString("adjustRegex.description"));
 		setCategory(Category.ConsoleCommands);
 	}
 

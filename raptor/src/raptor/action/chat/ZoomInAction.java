@@ -9,12 +9,12 @@ import raptor.international.L10n;
 import raptor.pref.PreferenceKeys;
 import raptor.service.ConnectorService;
 
-public class ZoomInAction extends AbstractRaptorAction {
+public class ZoomInAction extends AbstractRaptorAction {			
 	protected static L10n local = L10n.getInstance();
 	
 	public ZoomInAction() {
-		setName("Zoom-in");
-		setDescription("Increases all the font sizes in Raptor.");
+		setName(local.getString("zoomin.name"));
+		setDescription(local.getString("zoomin.description"));
 		setCategory(Category.ConsoleCommands);
 	}
 

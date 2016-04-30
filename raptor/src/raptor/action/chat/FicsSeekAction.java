@@ -16,12 +16,15 @@ package raptor.action.chat;
 import raptor.Raptor;
 import raptor.action.AbstractRaptorAction;
 import raptor.connector.Connector;
+import raptor.international.L10n;
 import raptor.swt.FicsSeekDialog;
 
 public class FicsSeekAction extends AbstractRaptorAction {
+	protected static L10n local = L10n.getInstance();
+	
 	public FicsSeekAction() {
-		setName("Seek");
-		setDescription("Display a seek dialog to find a game on Fics.");
+		setName(local.getString("seek.name"));
+		setDescription(local.getString("seek.description"));
 		setCategory(Category.IcsCommands);
 	}
 

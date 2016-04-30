@@ -15,26 +15,27 @@ package raptor.action.chat;
 
 import raptor.Raptor;
 import raptor.action.AbstractRaptorAction;
+import raptor.international.L10n;
 
 public class ToggleScrollLock extends AbstractRaptorAction {
+	protected static L10n local = L10n.getInstance();
+
 	public ToggleScrollLock() {
-		setName("Toggle Scroll Lock");
+		setName(local.getString("toggle.name"));
+		setDescription(local.getString("toggleScroll.description"));
 		setIcon("locked");
-		setDescription("Toggles scroll lock on and off.");
 		setCategory(Category.ConsoleCommands);
 	}
 
 	public void run() {
 		boolean wasHandled = false;
 		if (getChatConsoleControllerSource() != null) {
-			getChatConsoleControllerSource().setAutoScrolling(
-					!getChatConsoleControllerSource().isAutoScrolling());
+			getChatConsoleControllerSource().setAutoScrolling(!getChatConsoleControllerSource().isAutoScrolling());
 			wasHandled = true;
 		}
 
 		if (!wasHandled) {
-			Raptor.getInstance().alert(
-					getName() + " is only avalible from ChatConsole sources.");
+			Raptor.getInstance().alert(getName() + " is only avalible from ChatConsole sources.");
 		}
 	}
 }
