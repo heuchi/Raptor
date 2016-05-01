@@ -26,15 +26,12 @@ import org.eclipse.swt.widgets.MenuItem;
 
 import raptor.Raptor;
 import raptor.action.AbstractRaptorAction;
-import raptor.international.L10n;
 import raptor.service.GameService.Offer;
 
 public class PendingOffersAction extends AbstractRaptorAction {
-	protected static L10n local = L10n.getInstance();
-
 	public PendingOffersAction() {
-		setName(local.getString("pendingOffers.name"));
-		setDescription(local.getString("pendingOffers.description"));
+		setName("Show Pending Offers");
+		setDescription("Lights up if there is a pending offer. When clicking on the icon you are presented with a popup menu to accept/decline/withdraw offers.");
 		setCategory(Category.ConsoleCommands);
 		setIcon("dimLightbulb");
 	}
@@ -61,11 +58,11 @@ public class PendingOffersAction extends AbstractRaptorAction {
 			}
 
 			if (declineCounter > 1) {
-				items.add(new String[] { local.getString("declineAll"), declineAllCommand });
+				items.add(new String[] { "Decline all", declineAllCommand });
 			}
 
 			if (items.size() == 0) {
-				Raptor.getInstance().alert(local.getString("noPendingOffers"));
+				Raptor.getInstance().alert("There are no pending offers.");
 			} else {
 				Collections.sort(items, new Comparator<String[]>() {
 

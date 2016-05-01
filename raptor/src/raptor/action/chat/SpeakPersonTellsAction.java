@@ -15,18 +15,15 @@ package raptor.action.chat;
 
 import raptor.Raptor;
 import raptor.action.AbstractRaptorAction;
-import raptor.international.L10n;
 import raptor.swt.chat.controller.MainController;
 import raptor.swt.chat.controller.PersonController;
 import raptor.swt.chat.controller.ToolBarItemKey;
 
 public class SpeakPersonTellsAction extends AbstractRaptorAction {
-	protected static L10n local = L10n.getInstance();
-	
 	public SpeakPersonTellsAction() {
-		setName(local.getString("speakPerson.name"));
-		setDescription(local.getString("speakPerson.description"));
+		setName("Speak Person Tells");
 		setIcon("musicNote");
+		setDescription("Speaks all direct tells to you within this tab. Requires sound to be setup. See Preferences->Speech.");
 		setCategory(Category.ConsoleCommands);
 	}
 

@@ -15,15 +15,13 @@ package raptor.action.chat;
 
 import raptor.Raptor;
 import raptor.action.AbstractRaptorAction;
-import raptor.international.L10n;
 
 public class TellsMissedWhileIWasAwayAction extends AbstractRaptorAction {
-	protected static L10n local = L10n.getInstance();
-
 	public TellsMissedWhileIWasAwayAction() {
-		setName(local.getString("tellsMissed.name"));
-		setDescription(local.getString("This list is reset each time you enter a command."));
+		setName("Show Tells Missed While Away");
 		setIcon("chat");
+		setDescription("Shows all of the tells you missed while you were away. "
+				+ "This list is reset each time you enter a command.");
 		setCategory(Category.ConsoleCommands);
 	}
 
@@ -35,7 +33,8 @@ public class TellsMissedWhileIWasAwayAction extends AbstractRaptorAction {
 		}
 
 		if (!wasHandled) {
-			Raptor.getInstance().alert(getName() + " is only avalible from ChatConsole sources.");
+			Raptor.getInstance().alert(
+					getName() + " is only avalible from ChatConsole sources.");
 		}
 	}
 }

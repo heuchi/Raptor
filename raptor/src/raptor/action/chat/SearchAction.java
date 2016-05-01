@@ -15,15 +15,13 @@ package raptor.action.chat;
 
 import raptor.Raptor;
 import raptor.action.AbstractRaptorAction;
-import raptor.international.L10n;
 
 public class SearchAction extends AbstractRaptorAction {
-	protected static L10n local = L10n.getInstance();
-	
 	public SearchAction() {
-		setName(local.getString("search.name"));
-		setDescription(local.getString("search.description"));
+		setName("Search");
 		setIcon("search");
+		setDescription("Searches backward for the message in the console text. "
+				+ "The search is case insensitive and does not use regular expressions.");
 		setCategory(Category.ConsoleCommands);
 	}
 

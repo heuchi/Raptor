@@ -15,15 +15,13 @@ package raptor.action.chat;
 
 import raptor.Raptor;
 import raptor.action.AbstractRaptorAction;
-import raptor.international.L10n;
 import raptor.swt.chat.controller.ToolBarItemKey;
 
 public class PrependAction extends AbstractRaptorAction {
-	protected static L10n local = L10n.getInstance();
-	
 	public PrependAction() {
-		setName(local.getString("prepend.name"));
-		setDescription(local.getString("prepend.description"));
+		setName("Prepend");
+		setDescription("Toggles if the 'tell person' or 'tell channel' text "
+				+ "is prepended to the input field.");
 		setCategory(Category.ConsoleCommands);
 	}
 

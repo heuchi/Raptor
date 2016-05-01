@@ -66,7 +66,11 @@ public class RaptorActionFactory {
 			desc = desc.startsWith("$") ? L10n.getInstance().getString(desc)
 					: desc;
 			result.setDescription(desc);
-			result.setName(properties.getProperty("name"));
+
+			String name = properties.getProperty("name");
+			name = name.startsWith("$") ? L10n.getInstance().getString(name)
+					: name;
+			result.setName(name);
 			result.setIcon(properties.getProperty("icon"));
 			if (StringUtils.isBlank(result.getIcon())) {
 				result.setIcon(null);
