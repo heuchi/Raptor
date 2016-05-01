@@ -22,7 +22,7 @@ public class TellsMissedWhileIWasAwayAction extends AbstractRaptorAction {
 
 	public TellsMissedWhileIWasAwayAction() {
 		setName(local.getString("tellsMissed.name"));
-		setDescription(local.getString("This list is reset each time you enter a command."));
+		setDescription(local.getString("tellsMissed.description"));
 		setIcon("chat");
 		setCategory(Category.ConsoleCommands);
 	}

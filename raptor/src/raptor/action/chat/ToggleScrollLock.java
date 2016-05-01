@@ -21,7 +21,7 @@ public class ToggleScrollLock extends AbstractRaptorAction {
 	protected static L10n local = L10n.getInstance();
 
 	public ToggleScrollLock() {
-		setName(local.getString("toggle.name"));
+		setName(local.getString("toggleScroll.name"));
 		setDescription(local.getString("toggleScroll.description"));
 		setIcon("locked");
 		setCategory(Category.ConsoleCommands);
